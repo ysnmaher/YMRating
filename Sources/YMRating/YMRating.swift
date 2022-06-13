@@ -11,13 +11,14 @@ public struct YMRating: View {
     @Binding var selected:Int
     var maxRating:Int
     var width:CGFloat
-    var color : UIColor = .red
+    var color : UIColor
     var fillSymbol :String
     var emptySymbol :String
-    public init(maxRating:Int,selected:Binding<Int>,width:CGFloat=30,color:UIColor=UIColor.systemPurple,fillSymbol:String="heart.fill",emptySymbol:String="heart") {
+    public init(maxRating:Int,selected:Binding<Int>,width:CGFloat=30,color:UIColor=UIColor.systemYellow,fillSymbol:String="heart.fill",emptySymbol:String="heart") {
         self.maxRating = maxRating
         self._selected = selected
         self.width = width
+        self.color = color
         self.emptySymbol = emptySymbol
         self.fillSymbol = fillSymbol
         
